@@ -33,6 +33,16 @@ public:
     * @details 詳細な説明
     */
     int func(const int a, const int b);
+    
+    /**
+    * @brief func2
+    * @param[in] a 引数の説明
+    * @param[in] b 引数の説明
+    * @return int aとbの和を返す
+    * @details 詳細な説明
+    */
+    int func2(const int a, const int b);
+
 private:
     //! 変数 hoge あれこれ用途
     int hoge = 1;
