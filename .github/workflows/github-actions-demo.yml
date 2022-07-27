@@ -15,4 +15,16 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      
+      - name: Doxygen Action
+      # You may pin to the exact commit or the version.
+      # uses: mattnotmitt/doxygen-action@e13253538ce85a582a7b09338d541740c0f8d923
+        uses: mattnotmitt/doxygen-action@1.9.4
+        with:
+          # Path to Doxyfile
+          doxyfile-path: ./Doxyfile
+          # Working directory
+          working-directory: .
+          # Generate latex documentation
+          enable-latex: false
 
