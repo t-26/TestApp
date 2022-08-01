@@ -7,6 +7,7 @@
 */
 
 //  テスト
+//  テスト
 
 #ifndef TestClass_hpp
 #define TestClass_hpp
