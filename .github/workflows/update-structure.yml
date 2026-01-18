@@ -28,5 +28,5 @@ jobs:
           git config user.email "github-actions@github.com"
           git add STRUCTURE.md
           git diff --cached --quiet || git commit -m "chore: update folder structure table"
-          git pull --rebase origin main  # リモートに先行コミットがあれば統合
+          git pull --rebase origin master  # リモートに先行コミットがあれば統合
           git push
