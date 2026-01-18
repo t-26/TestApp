@@ -3,6 +3,7 @@
 | パス | 種類 |
 |------|------|
 | .github | フォルダ |
+| &nbsp;&nbsp;CODEOWNERS | ファイル |
 | &nbsp;&nbsp;workflows | フォルダ |
 | &nbsp;&nbsp;&nbsp;&nbsp;github-actions-demo.yml | ファイル |
 | &nbsp;&nbsp;&nbsp;&nbsp;update-structure.yml | ファイル |
