@@ -1,0 +1,28 @@
+name: Update Folder Structure
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  update-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate folder structure
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tree
+          echo "## フォルダ構成" > STRUCTURE.md
+          echo '```' >> STRUCTURE.md
+          tree -a -I ".git|node_modules|dist" >> STRUCTURE.md
+          echo '```' >> STRUCTURE.md
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add STRUCTURE.md
+          git diff --cached --quiet || git commit -m "chore: update folder structure"
+          git push
